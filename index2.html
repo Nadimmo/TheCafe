@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#where">Where</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="text">
+        <div class="h1"><h1>The <br>Cafe</h1></div>
+        <div class="ptag">
+            <small>Open from 6am to 5pm</small>
+        </div>
+        <div class="ptag2">
+            <small>15 Adr street, 5015</small>
+        </div>
+        <img src="coffeeshop.jpg" alt="">
+       
+    </div>
+<!-- ..............about.......... -->
+    <div class="about" id="about">
+        <h2>ABOUT THE CAFE</h2><br><br>
+        <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>
+
+            <b> <i>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff. <br><br>
+            
+                "Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.
+                
+                Chef, Coffeeist and Owner: Liam Brown</i></b></p><br><br>
+        <img src="coffeehouse2.jpg" alt="">
+        <small> <b>Opening hours:</b> everyday from 6am to 5pm.</small><br>
+        <small> <b>Address: </b>15 Adr street, 5015, NY</small>
+    </div>
+
+<!-- ..........menu............ -->
+    <h2 id="htag">THE MENU</h2>
+<div class="menu" id="menu">
+    <div class="tab-titles">
+        <p class="tab-links active-links" onclick="fun('eat')">Eat</p>
+        <p class="tab-links" onclick="fun('drink')">Drink</p>
+    </div>
+    <div class="tab-contents active-tab" id="eat">
+        <h3> Bread Basket</h3>
+        <small>Assortment of fresh baked fruit breads and muffins 5.50</small><br><br>
+        <h3>Honey Almond Granola with Fruits
+        </h3>
+        <small>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</small><br><br>
+        <h3>Belgian Waffle</h3>
+        <small>Vanilla flavored batter with malted flour 7.50</small><br><br>
+        <h3>Scrambled eggs</h3>
+        <small>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</small><br><br>
+        <h3>Blueberry Pancakes</h3>
+        <small>With syrup, butter and lots of berries 8.50</small><br>
+       
+    </div>
+    <div class="tab-contents " id="drink">
+        <h3>Coffee</h3>
+        <small>Regular coffee 2.50</small><br><br>
+        <h3>Chocolato</h3>
+        <small>Chocolate espresso with milk 4.50</small><br><br>
+        <h3>Corretto</h3>
+        <small>Whiskey and coffee 5.00</small><br><br>
+        <h3>Iced tea</h3>
+        <small>Hot tea, except not hot 3.00</small><br><br>
+        <h3>Soda</h3>
+        <small>Coke, Sprite, Fanta, etc. 2.50</small><br><br>
+    </div>
+</div>
+<!-- ...........where............ -->
+<div class="where" id="where">
+    <h2>WHERE TO FIND US</h2><br><br>
+    <p>Find us at some address at some place.</p> <br>
+    <img src="map.jpg" alt=""><br><br>
+    <p><b><i>FYI! </i></b> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. <br><br> <b><i>Reserve</i></b> a table, ask for today's special or just send us a message:</p>
+</div>
+
+<!-- ..........contact......... -->
+<div class="contact" id="contact">
+    <h2>Contact.</h2><br><br>
+<form action="" class="form">
+    <input type="text" name="name" id="" required placeholder="Enter your name"><br>
+    <input type="email" required placeholder="Enter your email"><br>
+    <input type="password" required placeholder="Enter your password"><br>
+    <input type="text" required placeholder="Enter your confirm password"><br>
+    <input type="datetime-local" required placeholder="Enter time please"><br>
+    <textarea name="comment" id="comment" cols="30" rows="10">Comment please</textarea ><br>
+</form>
+<button id="btn">Sen Message</button>
+</div>
+    <p id="ptag"> All Copyright Reserved 	&#169; Made by  	&#9829;Nadim Mostofa.</p>
+    
+<!-- .....................javascript part............................. -->
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents ');
+      
+        function fun(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-links");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add('active-links');
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+      </script>
+</body>
+</html>
